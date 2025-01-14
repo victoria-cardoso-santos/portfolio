@@ -1,0 +1,429 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #353434;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: 0.4s;
+}
+a:hover {
+    color: #37a1f7;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 40;
+    height: 60px;
+}
+
+/* Nav bar */
+#nav-bar {
+    padding: 0.25rem 1.5rem;
+    background-color: #2b2b2b;
+    border-radius: 0.7rem;
+}
+#nav-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+#nav-links {
+    display: flex;
+    gap: 1rem;
+}
+#img-logo {
+    width: 3rem;
+}
+
+/* Home */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+#foto-perfil {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+#info-pessoal {
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#info-pessoal #nome {
+    font-size: 45px;
+    padding-bottom: 0.25rem;
+    text-shadow: #000 3px 2px 3px;
+}
+#info-pessoal #cargo {
+    font-size: 20px;
+    color: #8b8cdc;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    text-align: center;
+    text-shadow: #000 3px 2px 3px;
+}
+#redes-sociais {
+    width: 350px;
+    text-align: center;
+    margin-top: 10px;
+}
+#redes-sociais a {
+    font-size: 32px;
+    margin: 0 3px;
+}
+
+/* Sobre, Formação, Projetos, Habilidades, Contato */
+#sobre,
+#formacao-academica,
+#projetos,
+#habilidades,
+#contato {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* Títulos */
+h2 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* Sobre */
+#sobre p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Formação Acadêmica */
+#formacao-academica li {
+    margin: 15px auto;
+    max-width: 500px;
+    border: 1px solid #8b8cdc;
+    border-radius: 10px;
+    line-height: 1.75;
+    padding: 15px;
+    text-align: start;
+}
+#formacao-academica p {
+    color: #8b8cdc;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#formacao-academica h4 {
+    font-size: 14px;
+    color: #d9d9dc;
+    font-weight: normal;
+}
+
+/* Projetos */
+#projetos ul {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#projetos li {
+    max-width: 250px;
+    border: 1px solid #8b8cdc;
+    border-radius: 10px;
+    line-height: 1.75;
+    padding: 15px;
+    text-align: center;
+}
+#projetos li h3 {
+    color: #8b8cdc;
+}
+#projetos img {
+    padding: 10px 10px;
+    width: 220px;
+    height: 220px;
+    background-color: #f6f3f3;
+    border-radius: 5px;
+}
+
+#projetos li a {
+    font-size: 32px;
+    margin: 0 3px;
+}
+
+/* Habilidades */
+#habilidades ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 colunas */
+    gap: 1rem; /* gap de 4 (1rem) entre as colunas */
+    margin: 0 auto; 
+}
+#habilidades li {
+    padding: 10px;
+    font-size: 50px;
+}
+
+/* Contato */
+#contato p {
+    font-size: 1.25rem;
+}
+#contato img {
+    width: 35px;
+    padding: 10px;
+}
+#contato-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1228px) {
+    #nav-bar-inner {
+        max-width: 1200px;
+    }
+
+    #foto-perfil {
+        width: 40%;
+        height: auto;
+    }
+    #info-pessoal {
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    #habilidades li {
+        font-size: 35px;
+    }
+    #formacao-academica li {
+        max-width: 80%;
+    }
+    #sobre h2{
+        font-size: 40px;
+        
+    }
+
+    #sobre p{
+        font-size: 1.8rem;
+        line-height: 1.5;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    #foto-perfil {
+        width: 50%;
+        height: auto;
+    }
+    #info-pessoal {
+        padding-left: 0;
+        padding-top: 10px;
+        text-align: center;
+
+    }
+    #projetos {
+        margin-top: 600px;
+    }
+    #projetos ul {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1rem;
+    }
+    #habilidades {
+        margin-top: 600px;
+
+    }
+    #habilidades ul {
+        justify-content: center;
+    }
+    #habilidades li {
+        font-size: 35px;
+    }
+    #formacao-academica li {
+        max-width: 100%;
+    }
+    #sobre h2{
+        font-size: 30px;
+        
+    }
+
+    #sobre p{
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 20px;
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    #nav-links {
+        display: none;
+    }
+    #nav-bar-inner {
+       display: none;
+    }
+
+    #img-logo {
+        width: 2rem;
+    }
+
+    #info-pessoal #nome {
+        font-size: 30px;
+    }
+    #info-pessoal #cargo {
+        font-size: 16px;
+    }
+    #projetos li {
+        max-width: 70%;
+    }
+    #projetos img {
+        max-width: 70%;
+    }
+    #redes-sociais a {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+
+    #formacao-academica {
+        align-items: center;
+    }
+    #formacao-academica li {
+        max-width: 60%;
+    }
+
+    #habilidades ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #habilidades li {
+        padding: 0;
+    }
+    
+
+    #sobre h2{
+        font-size: 25px;
+        
+    }
+    #sobre p{
+        font-size: 18px;
+        padding: 5px;
+        
+    }
+
+    #sobre {
+        max-width: 80%;
+
+    }
+
+    #contato {
+        max-width: 80%;
+
+    }
+
+}
+
+@media screen and (max-width: 240px) {
+    #nav-links {
+        display: none;
+    }
+    #nav-bar-inner {
+        max-height: 30px;
+
+    }
+
+    #img-logo {
+        width: 2rem;
+    }
+
+    #info-pessoal #nome {
+        font-size: 30px;
+    }
+    #info-pessoal #cargo {
+        font-size: 16px;
+    }
+    #projetos li {
+        max-width: 100%;
+    }
+    #redes-sociais a {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+
+    #formacao-academica {
+        align-items: center;
+    }
+
+    #habilidades ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #habilidades li {
+        padding: 0;
+    }
+    
+
+    #sobre h2{
+        font-size: 25px;
+        
+    }
+    #sobre p{
+        font-size: 18px;
+        
+    }
+    #sobre,
+    #formacao-academica,
+    #projetos,
+    #habilidades,
+    #contato {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+    }
+}
+    
